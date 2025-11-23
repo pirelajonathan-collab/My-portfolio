@@ -1,0 +1,154 @@
+ <svg id="svg_skills" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1042.32 545.32"><defs><style>.cls-1{fill:#c9c9c9;}.cls-2{fill:#eaeaea;}.cls-3{font-size:43px;font-family:Orbitron-Bold, Orbitron;font-weight:700;letter-spacing:0.02em;}.cls-4{letter-spacing:0.1em;}.cls-5{fill:#7c7c7c;}.cls-6{fill:none;stroke:#7c7c7c;}.cls-7{fill:url(#Degradado_sin_nombre_393);}.cls-12,.cls-18,.cls-24,.cls-8{font-size:19px;}.cls-12,.cls-18,.cls-24,.cls-31,.cls-8{fill:#fff;font-weight:800;}.cls-13,.cls-8{letter-spacing:0.05em;}.cls-9{fill:url(#Degradado_sin_nombre_305);}.cls-10{fill:url(#Degradado_sin_nombre_402);}.cls-11{fill:url(#Degradado_sin_nombre_398);}.cls-12{letter-spacing:0.03em;}.cls-14{fill:url(#Degradado_sin_nombre_288);}.cls-15{fill:url(#Degradado_sin_nombre_290);}.cls-16{fill:url(#Degradado_sin_nombre_356);}.cls-17{fill:url(#Degradado_sin_nombre_345);}.cls-18{letter-spacing:0.02em;}.cls-19{letter-spacing:0.05em;}.cls-20{letter-spacing:0.07em;}.cls-21{letter-spacing:0.07em;}.cls-22{fill:url(#Degradado_sin_nombre_391);}.cls-23{fill:url(#Degradado_sin_nombre_392);}.cls-24{letter-spacing:0.02em;}.cls-25{fill:url(#Degradado_sin_nombre_318);}.cls-26{fill:url(#Degradado_sin_nombre_311);}.cls-27{fill:url(#Degradado_sin_nombre_320);}.cls-28{fill:url(#Degradado_sin_nombre_268);}.cls-29{fill:url(#Degradado_sin_nombre_339);}.cls-30{fill:url(#Degradado_sin_nombre_329);}.cls-31{font-size:21.04px;letter-spacing:0.05em;}.cls-32{fill:url(#Degradado_sin_nombre_374);}.cls-33{fill:url(#Degradado_sin_nombre_363);}.cls-34{fill:url(#Degradado_sin_nombre_411);}.cls-35{fill:url(#Degradado_sin_nombre_406);}.cls-36{letter-spacing:0.07em;}.cls-37{letter-spacing:0.05em;}</style><linearGradient id="Degradado_sin_nombre_393" x1="105.07" y1="38.97" x2="307.65" y2="38.97" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fc4e2b"/><stop offset="0" stop-color="#fb4e2b"/><stop offset="0.15" stop-color="#df4526"/><stop offset="0.31" stop-color="#ca3e23"/><stop offset="0.49" stop-color="#bb3a20"/><stop offset="0.7" stop-color="#b2371e"/><stop offset="1" stop-color="#af361e"/></linearGradient><linearGradient id="Degradado_sin_nombre_305" x1="280.05" y1="38.97" x2="370.04" y2="38.97" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7f2716"/><stop offset="0.35" stop-color="#ad3720"/><stop offset="0.79" stop-color="#e2492b"/><stop offset="1" stop-color="#f7502f"/></linearGradient><linearGradient id="Degradado_sin_nombre_402" x1="235.93" y1="155.42" x2="326.95" y2="155.42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6b5b18"/><stop offset="0.14" stop-color="#71601a"/><stop offset="0.34" stop-color="#836f1f"/><stop offset="0.57" stop-color="#9f8826"/><stop offset="0.81" stop-color="#c7aa31"/><stop offset="1" stop-color="#eac83b"/></linearGradient><linearGradient id="Degradado_sin_nombre_398" x1="58.53" y1="155.42" x2="263.43" y2="155.42" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#efcc3c"/><stop offset="0.09" stop-color="#d7b736"/><stop offset="0.22" stop-color="#bca12f"/><stop offset="0.36" stop-color="#a88f2a"/><stop offset="0.51" stop-color="#998326"/><stop offset="0.7" stop-color="#917b24"/><stop offset="1" stop-color="#8e7923"/></linearGradient><linearGradient id="Degradado_sin_nombre_288" x1="177.81" y1="272.25" x2="269.04" y2="272.25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#274722"/><stop offset="0.17" stop-color="#2a4c24"/><stop offset="0.37" stop-color="#31592b"/><stop offset="0.57" stop-color="#3e6f37"/><stop offset="0.78" stop-color="#508f47"/><stop offset="1" stop-color="#67b65c"/><stop offset="1" stop-color="#67b75c"/></linearGradient><linearGradient id="Degradado_sin_nombre_290" y1="272.25" x2="205.37" y2="272.25" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#76d169"/><stop offset="0.09" stop-color="#66b45b"/><stop offset="0.2" stop-color="#589c4e"/><stop offset="0.32" stop-color="#4d8945"/><stop offset="0.46" stop-color="#467c3e"/><stop offset="0.64" stop-color="#41743a"/><stop offset="1" stop-color="#407239"/></linearGradient><linearGradient id="Degradado_sin_nombre_356" x1="236.31" y1="389.58" x2="327.49" y2="389.58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00233a"/><stop offset="0.17" stop-color="#002b48"/><stop offset="0.49" stop-color="#00406c"/><stop offset="0.91" stop-color="#0062a5"/><stop offset="1" stop-color="#006ab2"/></linearGradient><linearGradient id="Degradado_sin_nombre_345" x1="58.58" y1="389.58" x2="263.85" y2="389.58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#007bce"/><stop offset="0.01" stop-color="#007acc"/><stop offset="0.13" stop-color="#06a"/><stop offset="0.26" stop-color="#00558f"/><stop offset="0.4" stop-color="#004879"/><stop offset="0.56" stop-color="#003f6a"/><stop offset="0.74" stop-color="#003a61"/><stop offset="1" stop-color="#00385e"/></linearGradient><linearGradient id="Degradado_sin_nombre_391" x1="280.09" y1="506.09" x2="370.48" y2="506.09" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#21593e"/><stop offset="0.16" stop-color="#235f42"/><stop offset="0.36" stop-color="#296e4d"/><stop offset="0.58" stop-color="#33885f"/><stop offset="0.81" stop-color="#40ac78"/><stop offset="1" stop-color="#4dce90"/></linearGradient><linearGradient id="Degradado_sin_nombre_392" x1="103.9" y1="506.09" x2="307.39" y2="506.09" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#53e09c"/><stop offset="0.05" stop-color="#4aca8d"/><stop offset="0.13" stop-color="#40ae79"/><stop offset="0.22" stop-color="#379769"/><stop offset="0.32" stop-color="#30865d"/><stop offset="0.44" stop-color="#2c7954"/><stop offset="0.6" stop-color="#29724f"/><stop offset="1" stop-color="#28704e"/></linearGradient><linearGradient id="Degradado_sin_nombre_318" x1="676.36" y1="38.94" x2="766.27" y2="38.94" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4390ff"/><stop offset="0.14" stop-color="#397ee3"/><stop offset="0.42" stop-color="#275fb2"/><stop offset="0.67" stop-color="#1a498e"/><stop offset="0.87" stop-color="#123b78"/><stop offset="1" stop-color="#0f3670"/></linearGradient><linearGradient id="Degradado_sin_nombre_311" x1="739.11" y1="38.94" x2="941.54" y2="38.94" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1852a8"/><stop offset="0.21" stop-color="#1a55ac"/><stop offset="0.43" stop-color="#205eb9"/><stop offset="0.66" stop-color="#2a6dcf"/><stop offset="0.9" stop-color="#3882ed"/><stop offset="1" stop-color="#3f8cfc"/></linearGradient><linearGradient id="Degradado_sin_nombre_320" x1="722.73" y1="155.99" x2="812.52" y2="155.99" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#586ba8"/><stop offset="0.22" stop-color="#4a5a8d"/><stop offset="0.55" stop-color="#39456b"/><stop offset="0.82" stop-color="#2e3857"/><stop offset="1" stop-color="#2a334f"/></linearGradient><linearGradient id="Degradado_sin_nombre_268" x1="783.77" y1="155.98" x2="985.9" y2="155.98" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#364266"/><stop offset="0.2" stop-color="#3b486f"/><stop offset="0.53" stop-color="#485787"/><stop offset="0.94" stop-color="#5d70ae"/><stop offset="1" stop-color="#6174b5"/></linearGradient><linearGradient id="Degradado_sin_nombre_339" x1="777.13" y1="272.85" x2="867.05" y2="272.85" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3e74c1"/><stop offset="0.28" stop-color="#305a97"/><stop offset="0.6" stop-color="#234270"/><stop offset="0.85" stop-color="#1b3358"/><stop offset="1" stop-color="#182e4f"/></linearGradient><linearGradient id="Degradado_sin_nombre_329" x1="839.89" y1="272.85" x2="1042.32" y2="272.85" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#244370"/><stop offset="0.21" stop-color="#254574"/><stop offset="0.41" stop-color="#2a4d80"/><stop offset="0.62" stop-color="#315994"/><stop offset="0.83" stop-color="#3b6ab0"/><stop offset="1" stop-color="#457cce"/></linearGradient><linearGradient id="Degradado_sin_nombre_374" x1="722.76" y1="389.12" x2="813.61" y2="389.12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#95e02b"/><stop offset="0.23" stop-color="#77b322"/><stop offset="0.46" stop-color="#5c8b1a"/><stop offset="0.68" stop-color="#496e15"/><stop offset="0.86" stop-color="#3d5c11"/><stop offset="1" stop-color="#395610"/></linearGradient><linearGradient id="Degradado_sin_nombre_363" x1="786.17" y1="389.12" x2="990.69" y2="389.12" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#537c19"/><stop offset="0.26" stop-color="#557f1a"/><stop offset="0.45" stop-color="#5b881c"/><stop offset="0.61" stop-color="#66971f"/><stop offset="0.76" stop-color="#74ad24"/><stop offset="0.89" stop-color="#87c92a"/><stop offset="1" stop-color="#9ae530"/></linearGradient><linearGradient id="Degradado_sin_nombre_411" x1="676.36" y1="505.95" x2="767.28" y2="505.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffa017"/><stop offset="0.01" stop-color="#fc9e17"/><stop offset="0.25" stop-color="#c97e11"/><stop offset="0.48" stop-color="#a1650d"/><stop offset="0.69" stop-color="#85530a"/><stop offset="0.87" stop-color="#734808"/><stop offset="1" stop-color="#6d4407"/></linearGradient><linearGradient id="Degradado_sin_nombre_406" x1="739.81" y1="505.95" x2="944.49" y2="505.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#965d0b"/><stop offset="0.16" stop-color="#9c610c"/><stop offset="0.38" stop-color="#ae6d0f"/><stop offset="0.64" stop-color="#ca8014"/><stop offset="0.92" stop-color="#f29a1b"/><stop offset="1" stop-color="#ffa31d"/></linearGradient></defs>
+                    <g id="Capa_2" data-name="Capa 2">
+                        <g id="Centro" class="centerHexagon">
+                            <path transform="scale(0)" opacity="0" transform-origin="50%" class="cls-2" d="M611.31,118.22H435L346.76,271,435,423.72H611.31L699.5,271Zm-8.54,290.69H443.49L363.85,271,443.49,133H602.77L682.41,271Z"/>
+                            <polygon transform="rotate(0) scale(0)" transform-origin="50%" class="cls-1" points="588.48 157.77 450.76 157.77 384.18 270.97 450.76 388.18 588.48 388.18 653.84 270.97 588.48 157.77"/>
+                            <text opacity="0" class="cls-3" transform="translate(465.22 286.56)">Web</text>
+                        </g>
+                    <g id="Hexagons">
+                        <g id="Izq">
+                            <g id="Hex1" class="hex">
+                                <g id="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="440.07" cy="105.6" r="3.63"/>
+                                    <polyline stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" points="440.07 105.61 418.4 42.26 376.36 42.26"/>
+                                </g>
+                                <g id="bghexagon" class="bghexagon" transform="translate(300) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-7" d="M143.49,0H307.65V77.93H143.49q-19.22-19.49-38.42-39Z"/>
+                                    <text class="cls-8" transform="translate(175.52 44.43)">HTML</text>
+                                </g>
+                                <g id="hexagon" class="hexagon" transform="translate(20)" opacity="0">
+                                    <polygon class="cls-9" points="302.55 0 347.55 0 370.04 38.97 347.55 77.93 302.55 77.93 280.06 38.97 302.55 0"/>
+                                    <image width="512" height="512" transform="translate(300.52 13.17) scale(0.1)" xlink:href="assets/html.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex2" class="hex">
+                                <g id="linepoint-2" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="370.35" cy="193.87" r="3.63"/>
+                                    <path stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" d="M370.35,193.87,353.56,165.6,331,154.35"/>
+                                </g>
+                                <g id="bghexagon-2" data-name="bghexagon" class="bghexagon" transform="translate(300) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-11" d="M97.39,116h166v78.82h-166Q78,175.14,58.53,155.42Z"/>
+                                    <text class="cls-12" transform="translate(99.26 160.88)">JavaScript</text>
+                                </g>
+                                <g id="hexagon-2" data-name="hexagon" class="hexagon" transform="translate(20)" opacity="0">
+                                    <polygon class="cls-10" points="258.69 116.01 304.19 116.01 326.95 155.42 304.19 194.83 258.69 194.83 235.93 155.42 258.69 116.01"/>
+                                    <image width="350" height="350" transform="translate(258.99 133.48) scale(0.13)" xlink:href="assets/js.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex3" class="hex">
+                                <g id="linepoint-3" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="323.34" cy="272.25" r="3.63"/>
+                                    <path stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" d="M323.34,272.25l-45.88.32"/>
+                                </g>
+                                <g id="bghexagon-3" data-name="bghexagon" class="bghexagon" transform="translate(300) scale(0.1, 1)" opacity="0"><path class="cls-15" d="M39,232.74H205.37v79H39L0,272.25Z"/>
+                                    <text class="cls-8" transform="translate(48.69 277.71)">MongoDB</text>
+                                </g>
+                                <g id="hexagon-3" data-name="hexagon" class="hexagon" transform="translate(20)" opacity="0">
+                                    <polygon class="cls-14" points="200.62 232.75 246.24 232.75 269.04 272.25 246.24 311.75 200.62 311.75 177.81 272.25 200.62 232.75"/>
+                                    <image width="600" height="600" transform="translate(201.41 250.41) scale(0.07)" xlink:href="assets/mongodb.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex4" class="hex">
+                                <g id="linepoint-4" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="369.64" cy="350.76" r="3.63"/>
+                                    <path stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" d="M369.64,350.76q-7.78,14.48-15.58,28.95L332,391.91"/>
+                                </g>
+                                <g id="bghexagon-4" data-name="bghexagon" class="bghexagon" transform="translate(300) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-17" d="M97.51,350.09H263.85v79H97.51L58.58,389.58Z"/>
+                                    <text class="cls-18" transform="translate(99.86 394.99)">Wordpress</text>
+                                </g>
+                                <g id="hexagon-4" data-name="hexagon" class="hexagon" transform="translate(20)" opacity="0">
+                                    <polygon class="cls-16" points="259.1 350.09 304.69 350.09 327.49 389.58 304.69 429.06 259.1 429.06 236.31 389.58 259.1 350.09"/>
+                                    <image width="150" height="150" transform="translate(258.57 365.38) scale(0.32)" xlink:href="assets/wordpress.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex5" class="hex">
+                                <g id="linepoint-5" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="438.68" cy="438.77" r="3.63"/>
+                                    <polyline stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" points="438.68 438.77 417.01 502.11 374.97 502.11"/>
+                                </g>
+                                <g id="bghexagon-5" data-name="bghexagon" class="bghexagon" transform="translate(300) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-23" d="M142.49,467h164.9v78.28H142.49L103.9,506.09Z"/>
+                                    <text class="cls-24" transform="translate(170.75 511.55)">VueJS</text>
+                                </g>
+                                <g id="hexagon-5" data-name="hexagon" class="hexagon" transform="translate(20)" opacity="0">
+                                    <polygon class="cls-22" points="302.69 466.95 347.88 466.95 370.48 506.09 347.88 545.23 302.69 545.23 280.09 506.09 302.69 466.95"/>
+                                    <image width="400" height="400" transform="translate(300.97 483.18) scale(0.12)" xlink:href="assets/vuejs.png"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="Der">
+                            <g id="Hex6" class="hex">
+                                <g id="linepoint-6" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="606.13" cy="105.57" r="3.63"/>
+                                    <polyline stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" points="606.13 105.57 627.8 42.23 669.84 42.23"/>
+                                </g>
+                                <g id="bghexagon-6" data-name="bghexagon" class="bghexagon" transform="translate(650) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-26" d="M903.15,0h-164V77.87h164q19.19-19.47,38.39-38.93Z"/>
+                                    <text class="cls-8" transform="translate(818.88 45.05)">CSS</text>
+                                </g>
+                                <g id="hexagon-6" data-name="hexagon" class="hexagon" transform="translate(-20)" opacity="0">
+                                    <polygon class="cls-25" points="743.79 0 698.84 0 676.36 38.94 698.84 77.87 743.79 77.87 766.27 38.94 743.79 0"/>
+                                    <image width="300" height="300" transform="translate(697.05 8.42) scale(0.17)" xlink:href="assets/css.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex7" class="hex">
+                                <g id="linepoint-7" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="678.93" cy="193.91" r="3.63"/>
+                                    <path stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" d="M678.93,193.91l16.67-28.34,22.5-11.34"/>
+                                </g>
+                                <g id="bghexagon-7" data-name="bghexagon" class="bghexagon" transform="translate(650) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-28" d="M947.56,117.1H783.77v77.76H947.56L985.9,156Z"/>
+                                    <text class="cls-8" transform="translate(862.76 161.45)">PHP</text>
+                                </g>
+                                <g id="hexagon-7" data-name="hexagon" class="hexagon" transform="translate(-20)" opacity="0">
+                                    <polygon class="cls-27" points="790.07 117.11 745.18 117.11 722.73 155.99 745.18 194.87 790.07 194.87 812.52 155.99 790.07 117.11"/>
+                                    <image width="256" height="256" transform="translate(744 132.63) scale(0.17)" xlink:href="assets/php.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex8" class="hex">
+                                <g id="linepoint-8" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="722.86" cy="272.22" r="3.63"/>
+                                    <path stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" d="M722.86,272.22l45.88.32"/>
+                                </g>
+                                <g id="bghexagon-8" data-name="bghexagon" class="bghexagon" transform="translate(650) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-30" d="M1003.93,233.62h-164v78.46h164l38.39-39.23Q1023.12,253.24,1003.93,233.62Z"/>
+                                    <text class="cls-31" transform="translate(899.93 279.84)">MySQL</text>
+                                </g>
+                                <g id="hexagon-8" data-name="hexagon" class="hexagon" transform="translate(-20)" opacity="0">
+                                    <polygon class="cls-29" points="844.57 233.63 799.61 233.63 777.13 272.86 799.61 312.08 844.57 312.08 867.05 272.86 844.57 233.63"/>
+                                    <image width="512" height="512" transform="translate(799.31 249.21) scale(0.09 0.09)" xlink:href="assets/mysql.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex9" class="hex">
+                                <g id="linepoint-9" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="681.84" cy="348.93" r="3.63"/>
+                                    <path stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" d="M681.84,348.93q6.09,15.27,12.16,30.54l20.52,14.65"/>
+                                </g>
+                                <g id="bghexagon-9" data-name="bghexagon" class="bghexagon" transform="translate(650) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-33" d="M951.9,349.78H786.17v78.68H951.9l38.79-39.34Z"/>
+                                    <text class="cls-31" transform="translate(843.08 396.05)">NodeJS</text>
+                                </g>
+                                <g id="hexagon-9" data-name="hexagon" class="hexagon" transform="translate(-20)" opacity="0">
+                                    <polygon class="cls-32" points="790.9 349.78 745.48 349.78 722.76 389.12 745.48 428.46 790.9 428.46 813.61 389.12 790.9 349.78"/>
+                                    <image width="400" height="400" transform="translate(745.32 365.79) scale(0.12)" xlink:href="assets/node-js.png"/>
+                                </g>
+                            </g>
+                            <g id="Hex10" class="hex">
+                                <g id="linepoint-10" data-name="linepoint" class="linepoint">
+                                    <circle opacity="0" class="cls-5" cx="607.52" cy="438.73" r="3.63"/>
+                                    <polyline stroke-width="1" stroke-dasharray="120" stroke-dashoffset="120" class="cls-6" points="607.52 438.74 629.19 502.08 671.23 502.08"/>
+                                </g>
+                                <g id="bghexagon-10" data-name="bghexagon" class="bghexagon" transform="translate(650) scale(0.1, 1)" opacity="0">
+                                    <path class="cls-35" d="M905.67,466.58H739.81v78.74H905.67L944.49,506Z"/>
+                                    <text class="cls-31" transform="translate(789.24 512.88)">FireBase</text>
+                                </g>
+                                <g id="hexagon-10" data-name="hexagon" class="hexagon" transform="translate(-20)" opacity="0">
+                                    <polygon class="cls-34" points="744.55 466.58 699.09 466.58 676.36 505.95 699.09 545.32 744.55 545.32 767.28 505.95 744.55 466.58"/>
+                                    <image width="373" height="512" transform="translate(704.15 482.86) scale(0.09)" xlink:href="assets/firebase.png"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                </svg>
