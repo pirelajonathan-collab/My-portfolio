@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InmoGestión | Soluciones para Condominios</title>
+    <!-- Importar fuente moderna de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES DE COLOR --- */
+        :root {
+            --primary: #4FC3F7; /* Azul Claro */
+            --primary-dark: #039BE5;
+            --secondary: #7E57C2; /* Morado */
+            --secondary-dark: #512DA8;
+            --white: #ffffff;
+            --gray-light: #f4f6f8;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- HEADER & NAV --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .logo span { color: var(--primary-dark); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--secondary); }
+
+        .btn-contact {
+            padding: 0.5rem 1.5rem;
+            background: var(--secondary);
+            color: var(--white) !important;
+            border-radius: 50px;
+            transition: background 0.3s;
+        }
+
+        .btn-contact:hover { background: var(--secondary-dark); }
+
+        .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- SECCIÓN 1: HERO (ENCABEZADO PRINCIPAL) --- */
+        #inicio {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(126, 87, 194, 0.9), rgba(79, 195, 247, 0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-hero {
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--secondary);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s box-shadow 0.3s;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- ANIMACIONES SCROLL --- */
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- SECCIÓN 2: SOBRE NOSOTROS --- */
+        #nosotros {
+            padding: 5rem 10%;
+            background-color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* --- SECCIÓN 3: SERVICIOS --- */
+        #servicios {
+            padding: 5rem 10%;
+            background-color: var(--gray-light);
+            text-align: center;
+        }
+
+        #servicios .section-title::after { left: 50%; transform: translateX(-50%); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(79, 195, 247, 0.2);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* --- SECCIÓN 4: RESEÑAS --- */
+        #resenas {
+            padding: 5rem 10%;
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        #resenas .section-title::after { left: 50%; transform: translateX(-50%); }
+
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 300px;
+            position: relative;
+        }
+
+        .quote-icon {
+            color: var(--primary);
+            font-size: 2rem;
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--text-light);
+            margin: 1.5rem 0;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+        
+        .user-details h4 { color: var(--secondary); font-size: 0.95rem; }
+        .user-details span { color: var(--primary-dark); font-size: 0.8rem; }
+
+/* --- SECCIÓN FORMULARIO --- */
+        #contacto-form-section {
+            padding: 5rem 10%;
+            background-color: var(--gray-light);
+            display: flex;
+            justify-content: center;
+        }
+
+        .form-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .form-description {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        /* Estilos de los inputs */
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            outline: none;
+            background: #fafafa;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--primary);
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(79, 195, 247, 0.1);
+        }
+
+        /* Botón de Enviar */
+        .btn-submit {
+            padding: 1rem 2rem;
+            background: var(--secondary);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            align-self: center;
+            min-width: 200px;
+        }
+
+        .btn-submit:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(81, 45, 168, 0.3);
+        }
+
+        /* Responsive para el formulario */
+        @media (max-width: 768px) {
+            .input-group {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .form-container {
+                padding: 2rem;
+            }
+        }
+
+        /* --- SECCIÓN 5: FOOTER --- */
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 4rem 10% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 { margin-bottom: 1.5rem; color: var(--primary); }
+        .footer-col p { opacity: 0.8; margin-bottom: 1rem; line-height: 1.6; }
+        
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a:hover { color: var(--primary); padding-left: 5px; transition: 0.3s; }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .social-icons a:hover { color: var(--primary); transform: scale(1.1); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: var(--white);
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                transform: translateY(-150%);
+                transition: 0.5s;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active { transform: translateY(0); }
+            .menu-toggle { display: block; color: var(--secondary); }
+            
+            .hero-content h1 { font-size: 2.5rem; }
+            #nosotros { flex-direction: column-reverse; }
+            .about-img, .about-text { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="logo">Inmo<span>Gestión</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">La Empresa</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li><a href="#contacto" class="btn-contact">Contactar</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. HEADER / HERO -->
+    <header id="inicio">
+        <div class="hero-content hidden">
+            <h1>Expertos en Gestión de Condominios</h1>
+            <p>Simplificamos la administración de tu inmueble con transparencia, tecnología y eficiencia. Tu tranquilidad es nuestro compromiso.</p>
+            <a href="#servicios" class="btn-hero">Ver Servicios</a>
+        </div>
+    </header>
+
+    <!-- 2. LA EMPRESA -->
+    <section id="nosotros">
+        <div class="about-img hidden">
+            <!-- Imagen de oficina moderna/equipo -->
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" alt="Equipo de trabajo">
+        </div>
+        <div class="about-text hidden">
+            <h2 class="section-title">Sobre InmoGestión</h2>
+            <p>Somos una empresa inmobiliaria líder dedicada exclusivamente a la administración y cobro de condominios residenciales y comerciales. Con más de 10 años en el mercado, entendemos los desafíos de la convivencia y las finanzas comunitarias.</p>
+            <p>Nuestra filosofía se basa en la <strong>transparencia financiera</strong> y el uso de herramientas digitales modernas para asegurar que cada propietario sepa exactamente en qué se invierte su dinero.</p>
+            <p style="color: var(--secondary); font-weight: 600;">Más que administradores, somos tus aliados estratégicos.</p>
+        </div>
+    </section>
+
+    <!-- 3. SERVICIOS -->
+    <section id="servicios">
+        <h2 class="section-title hidden">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <!-- Servicio 1 -->
+            <div class="service-card hidden">
+                <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Gestión de Cobranza</h3>
+                <p>Automatización de recibos, seguimiento de morosidad y pasarelas de pago digitales para facilitar el cobro del condominio.</p>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="service-card hidden">
+                <div class="icon-box"><i class="fas fa-building"></i></div>
+                <h3>Mantenimiento</h3>
+                <p>Supervisión de obras, limpieza y seguridad. Contamos con una red de proveedores certificados para tu edificio.</p>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="service-card hidden">
+                <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
+                <h3>Asesoría Legal</h3>
+                <p>Apoyo jurídico en normativas de propiedad horizontal, mediación de conflictos y recuperación de cartera vencida.</p>
+            </div>
+            <!-- Servicio 4 -->
+            <div class="service-card hidden">
+                <div class="icon-box"><i class="fas fa-laptop-house"></i></div>
+                <h3>Oficina Virtual</h3>
+                <p>Plataforma web y app móvil para que los propietarios consulten balances, reserven áreas comunes y voten en línea.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. RESEÑAS -->
+    <section id="resenas">
+        <h2 class="section-title hidden">Lo que dicen nuestros clientes</h2>
+        <div class="reviews-container hidden">
+            <!-- Reseña 1 -->
+            <div class="review-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="review-text">"Desde que contratamos a InmoGestión, la morosidad bajó un 40%. La app para ver los gastos es increíblemente útil y transparente."</p>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+                    </div>
+                    <div class="user-details">
+                        <h4>María González</h4>
+                        <span>Junta de Condominio, Res. El Valle</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Reseña 2 -->
+            <div class="review-card">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p class="review-text">"Excelente servicio al cliente. Siempre responden rápido ante cualquier emergencia de mantenimiento en el edificio."</p>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+                    </div>
+                    <div class="user-details">
+                        <h4>Carlos Rodríguez</h4>
+                        <span>Propietario, Torre Azul</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 4.5 SECCIÓN FORMULARIO DE CONTACTO -->
+    <section id="contacto-form-section">
+        <div class="form-container hidden">
+            <h2 class="section-title">Envíanos un Mensaje</h2>
+            <p class="form-description">¿Tienes dudas sobre la administración de tu condominio? Escríbenos y te responderemos a la brevedad.</p>
+            
+            <form action="enviar.php" method="POST" class="contact-form">
+                <div class="input-group">
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                    <input type="email" name="correo" placeholder="Tu Correo Electrónico" required>
+                </div>
+                <input type="text" name="asunto" placeholder="Asunto" required>
+                <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                
+                <button type="submit" class="btn-submit">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+    <!-- 5. FOOTER -->
+    <footer id="contacto">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>InmoGestión</h3>
+                <p>Transformando la manera de vivir en comunidad con soluciones inteligentes y humanas.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#">Portal de Pagos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Principal, Edif. Centro, Piso 5</li>
+                    <li><i class="fas fa-phone"></i> +58 (212) 555-0199</li>
+                    <li><i class="fas fa-envelope"></i> contacto@inmogestion.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 InmoGestión C.A. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // 1. Menú Responsive
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // 2. Animaciones al hacer Scroll (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1 // Se activa cuando el 10% del elemento es visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, observerOptions);
+
+        // Seleccionar todos los elementos con la clase 'hidden'
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        // 3. Navbar effect on scroll (opcional para estilo visual)
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = "0 5px 20px rgba(0,0,0,0.1)";
+            } else {
+                nav.style.boxShadow = "0 2px 10px rgba(0,0,0,0.05)";
+            }
+        });
+
+        // ... (Tu código JS anterior) ...
+
+        // Verificar parámetros URL para mostrar alertas de envío
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+
+        if (status === 'success') {
+            alert("¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.");
+            // Limpiar la URL para que no salga la alerta al recargar
+            window.history.replaceState({}, document.title, window.location.pathname);
+        } else if (status === 'error') {
+            alert("Por favor completa todos los campos correctamente.");
+        } else if (status === 'server_error') {
+            alert("Hubo un problema al enviar el correo. Por favor intenta más tarde.");
+        }
+    </script>
+
+</body>
+</html>
