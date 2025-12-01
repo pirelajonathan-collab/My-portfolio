@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Axie - Drift Visual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>F1 Axie - Mobile Controls</title>
     <style>
-        body { margin: 0; overflow: hidden; background-color: #87CEEB; font-family: 'Segoe UI', sans-serif; }
+        body { margin: 0; overflow: hidden; background-color: #87CEEB; font-family: 'Segoe UI', sans-serif; touch-action: none; /* Evita zoom en móviles */ }
         canvas { display: block; }
         
         #hud {
@@ -36,10 +36,10 @@
 
         #minimap-container {
             position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 200px;
-            height: 200px;
+            top: 20px; /* Movido arriba para no estorbar controles */
+            right: 20px;
+            width: 150px;
+            height: 150px;
             background: rgba(43, 35, 26, 0.85);
             border: 3px solid #eebb55;
             border-radius: 12px;
@@ -51,18 +51,117 @@
 
         #instrucciones {
             position: absolute;
-            bottom: 20px;
+            top: 180px;
             right: 20px;
             color: #4a3b2a;
-            background: rgba(255, 248, 231, 0.9);
-            padding: 15px;
-            border-radius: 12px;
+            background: rgba(255, 248, 231, 0.6);
+            padding: 10px;
+            border-radius: 8px;
             border: 2px solid #eebb55;
             pointer-events: none;
-            font-size: 14px;
+            font-size: 12px;
             text-align: right;
             box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+            max-width: 200px;
         }
+
+        /* --- CONTROLES MÓVILES (SNES STYLE) --- */
+        #mobile-controls {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            height: 180px;
+            pointer-events: none; /* Dejar pasar toques fuera de los botones */
+            z-index: 50;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+
+        .control-group {
+            pointer-events: auto;
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+
+        /* Botones Generales */
+        .game-btn {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(80, 80, 80, 0.5); /* Base oscura */
+            border: 2px solid rgba(200, 200, 200, 0.6);
+            color: rgba(255, 255, 255, 0.9);
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+            user-select: none;
+            -webkit-user-select: none;
+            backdrop-filter: blur(2px);
+            transition: transform 0.1s;
+        }
+        
+        .game-btn:active {
+            transform: scale(0.95);
+            background: rgba(100, 100, 100, 0.7);
+        }
+
+        /* Cruceta (Izquierda) */
+        .dpad-btn {
+            background: rgba(40, 40, 40, 0.6);
+            border-radius: 10px;
+            width: 70px;
+            height: 60px;
+            font-size: 30px;
+        }
+        #btn-left { left: 0; top: 60px; border-radius: 10px 0 0 10px; }
+        #btn-right { left: 80px; top: 60px; border-radius: 0 10px 10px 0; }
+        
+        /* Centro de la cruceta decorativo */
+        .dpad-center {
+            position: absolute;
+            left: 70px; top: 60px;
+            width: 10px; height: 60px;
+            background: rgba(40, 40, 40, 0.6);
+            border-top: 2px solid rgba(200,200,200,0.6);
+            border-bottom: 2px solid rgba(200,200,200,0.6);
+        }
+
+        /* Botones Acción (Derecha) */
+        .action-btn {
+            width: 65px;
+            height: 65px;
+            background: rgba(87, 75, 144, 0.6); /* Morado SNES */
+        }
+        
+        /* Layout Botones: B abajo-izq, A arriba-der */
+        #btn-b { bottom: 10px; left: 10px; } /* Freno */
+        #btn-a { right: 10px; top: 30px; }   /* Acelerar */
+        
+        #btn-fire {
+            width: 50px; height: 50px;
+            background: rgba(192, 57, 43, 0.6); /* Rojo */
+            top: 0; left: 0;
+            font-size: 20px;
+        }
+
+        /* Labels pequeños estilo control */
+        .btn-label {
+            position: absolute;
+            bottom: -20px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: #ccc;
+            font-weight: bold;
+            pointer-events: none;
+        }
+
     </style>
 </head>
 <body>
@@ -81,9 +180,33 @@
     <div id="minimap-container"><canvas id="minimap"></canvas></div>
     
     <div id="instrucciones">
-        <b>LUNACIA DRIFT</b><br>
-        Humo en cada curva<br>
+        <b>LUNACIA (Letra R)</b><br>
+        Usa los controles en pantalla<br>
         🔴 Misil | 🟡 Turbo | 🔵 Escudo
+    </div>
+
+    <!-- CONTROLES MÓVILES -->
+    <div id="mobile-controls">
+        <!-- Lado Izquierdo: Cruceta -->
+        <div class="control-group">
+            <div class="dpad-center"></div>
+            <div id="btn-left" class="game-btn dpad-btn">◀</div>
+            <div id="btn-right" class="game-btn dpad-btn">▶</div>
+        </div>
+
+        <!-- Lado Derecho: Botones A/B -->
+        <div class="control-group">
+            <div id="btn-fire" class="game-btn">🚀</div>
+            
+            <div id="btn-b" class="game-btn action-btn">
+                B
+                <span class="btn-label">Freno</span>
+            </div>
+            <div id="btn-a" class="game-btn action-btn">
+                A
+                <span class="btn-label">Gas</span>
+            </div>
+        </div>
     </div>
 
     <script type="module">
@@ -162,7 +285,6 @@
         ground.receiveShadow = true;
         scene.add(ground);
 
-        // Montañas
         function createMountains() {
             const mountainGeo = new THREE.ConeGeometry(1, 1, 4); 
             const colors = [0x6A5ACD, 0x483D8B, 0x20B2AA, 0x5F9EA0]; 
@@ -180,30 +302,20 @@
         }
         createMountains();
 
-        // Función Cinta Suavizada
         function createSmoothRibbon(curve, width, segments, material, yPos) {
             const geometry = new THREE.BufferGeometry();
-            const vertices = [];
-            const normals = []; 
-            const uvs = [];
-            const indices = [];
+            const vertices = []; const normals = []; const uvs = []; const indices = [];
             const points = curve.getSpacedPoints(segments);
-
             for (let i = 0; i < points.length; i++) {
                 const u = i / points.length;
                 const point = points[i];
                 const tangent = curve.getTangentAt(u).normalize();
                 const binormal = new THREE.Vector3(-tangent.z, 0, tangent.x).normalize();
-
                 const left = point.clone().add(binormal.clone().multiplyScalar(width / 2));
                 const right = point.clone().add(binormal.clone().multiplyScalar(-width / 2));
-
-                vertices.push(left.x, yPos, left.z);
-                vertices.push(right.x, yPos, right.z);
-
+                vertices.push(left.x, yPos, left.z); vertices.push(right.x, yPos, right.z);
                 normals.push(0, 1, 0); normals.push(0, 1, 0); 
                 uvs.push(0, u * 30); uvs.push(1, u * 30);
-
                 if (i > 0) {
                     const cL = i*2, cR = i*2+1, pL = (i-1)*2, pR = (i-1)*2+1;
                     indices.push(pL, cL, pR, cL, cR, pR);
@@ -274,45 +386,28 @@
 
         function placeDecorations() {
             const curvePts = curve.getSpacedPoints(400);
-
-            // Entorno (Fuera de la pista)
             for(let i=0; i<800; i++) {
                 const x = (Math.random() - 0.5) * 1200;
                 const z = (Math.random() - 0.5) * 1200;
                 const pos = new THREE.Vector3(x, 0, z);
-
                 let tooClose = false;
                 for(let p of curvePts) { if(pos.distanceTo(p) < ROAD_WIDTH/2 + 8) { tooClose = true; break; } }
                 if(tooClose) continue;
-
                 const rand = Math.random();
                 if(rand > 0.7) { 
                     const tree = createAxieTree(Math.random()>0.9?'pink':'green');
-                    tree.position.copy(pos);
-                    const s = Math.random() * 2 + 2.5; tree.scale.set(s,s,s);
-                    scene.add(tree);
+                    tree.position.copy(pos); const s = Math.random() * 2 + 2.5; tree.scale.set(s,s,s); scene.add(tree);
                 } 
                 else if (rand > 0.4) { 
                     const rock = new THREE.Mesh(rockGeo, matRock);
-                    rock.position.copy(pos);
-                    const s = Math.random() * 2 + 1;
-                    rock.scale.set(s, s*0.8, s);
-                    rock.rotation.set(Math.random(), Math.random(), Math.random());
-                    rock.castShadow = true;
-                    scene.add(rock);
+                    rock.position.copy(pos); const s = Math.random() * 2 + 1; rock.scale.set(s, s*0.8, s); rock.rotation.set(Math.random(), Math.random(), Math.random()); rock.castShadow = true; scene.add(rock);
                 }
                 else if (rand > 0.2) { 
                     const bush = new THREE.Mesh(foliageGeo, matBush);
-                    bush.position.set(pos.x, 0.5, pos.z);
-                    const s = Math.random() * 1.5 + 1; bush.scale.set(s, s*0.7, s);
-                    bush.castShadow = true; scene.add(bush);
+                    bush.position.set(pos.x, 0.5, pos.z); const s = Math.random() * 1.5 + 1; bush.scale.set(s, s*0.7, s); bush.castShadow = true; scene.add(bush);
                 }
-                else { 
-                    const patch = createFlowerPatch(); patch.position.copy(pos); scene.add(patch);
-                }
+                else { const patch = createFlowerPatch(); patch.position.copy(pos); scene.add(patch); }
             }
-
-            // Decoración EN Carretera
             for(let i=0; i<150; i++) {
                 const u = Math.random();
                 const point = curve.getPointAt(u);
@@ -321,11 +416,7 @@
                 const offset = (Math.random() - 0.5) * (ROAD_WIDTH - 2); 
                 const pos = point.clone().add(binormal.multiplyScalar(offset));
                 pos.y = 0.12; 
-
-                const patch = createFlowerPatch();
-                patch.position.copy(pos);
-                patch.scale.set(0.6, 0.6, 0.6); 
-                scene.add(patch);
+                const patch = createFlowerPatch(); patch.position.copy(pos); patch.scale.set(0.6, 0.6, 0.6); scene.add(patch);
             }
         }
         placeDecorations();
@@ -352,49 +443,24 @@
 
         // --- 7. OBJETOS INTERACTIVOS ---
         const powerUps = []; const obstacles = [];
-        
         function spawnObstacle() {
-            const u = Math.random();
-            const point = curve.getPointAt(u);
-            const tangent = curve.getTangentAt(u).normalize();
-            const normal = new THREE.Vector3(-tangent.z, 0, tangent.x);
-            const offset = (Math.random() - 0.5) * (ROAD_WIDTH - 6); 
-            const pos = point.clone().add(normal.multiplyScalar(offset));
-            pos.y = 1.5; 
-
+            const u = Math.random(); const point = curve.getPointAt(u); const tangent = curve.getTangentAt(u).normalize();
+            const normal = new THREE.Vector3(-tangent.z, 0, tangent.x); const offset = (Math.random() - 0.5) * (ROAD_WIDTH - 6); 
+            const pos = point.clone().add(normal.multiplyScalar(offset)); pos.y = 1.5; 
             const mesh = new THREE.Mesh(new THREE.DodecahedronGeometry(1.8), new THREE.MeshStandardMaterial({ color: 0x4a6b22 }));
-            mesh.userData = { type: 'obstacle' }; 
-            mesh.position.copy(pos);
-            mesh.castShadow = true;
-            
-            scene.add(mesh);
-            obstacles.push(mesh);
+            mesh.userData = { type: 'obstacle' }; mesh.position.copy(pos); mesh.castShadow = true; scene.add(mesh); obstacles.push(mesh);
         }
-
         function spawnPowerUp() {
-            const u = Math.random();
-            const point = curve.getPointAt(u);
-            const tangent = curve.getTangentAt(u).normalize();
-            const normal = new THREE.Vector3(-tangent.z, 0, tangent.x);
-            const offset = (Math.random() - 0.5) * (ROAD_WIDTH - 6);
-            const pos = point.clone().add(normal.multiplyScalar(offset));
-            pos.y = 1.5; 
-
-            const pTypes = ['missile', 'turbo', 'shield']; 
-            const pType = pTypes[Math.floor(Math.random()*pTypes.length)];
+            const u = Math.random(); const point = curve.getPointAt(u); const tangent = curve.getTangentAt(u).normalize();
+            const normal = new THREE.Vector3(-tangent.z, 0, tangent.x); const offset = (Math.random() - 0.5) * (ROAD_WIDTH - 6);
+            const pos = point.clone().add(normal.multiplyScalar(offset)); pos.y = 1.5; 
+            const pTypes = ['missile', 'turbo', 'shield']; const pType = pTypes[Math.floor(Math.random()*pTypes.length)];
             const colors = { 'missile': 0xff6b6b, 'turbo': 0xffd700, 'shield': 0x4dabf7 };
-            
             const mesh = new THREE.Mesh(new THREE.BoxGeometry(1.5, 1.5, 1.5), new THREE.MeshStandardMaterial({ color: colors[pType], emissive: colors[pType], emissiveIntensity: 0.6 }));
             mesh.userData = { type: 'powerup', effect: pType, rotSpeed: Math.random()*0.05 + 0.02 }; 
-            
-            mesh.position.copy(pos);
-            mesh.castShadow = true;
-            scene.add(mesh);
-            powerUps.push(mesh);
+            mesh.position.copy(pos); mesh.castShadow = true; scene.add(mesh); powerUps.push(mesh);
         }
-
-        for(let i=0; i<30; i++) spawnPowerUp(); 
-        for(let i=0; i<OBSTACLE_COUNT; i++) spawnObstacle();
+        for(let i=0; i<30; i++) spawnPowerUp(); for(let i=0; i<OBSTACLE_COUNT; i++) spawnObstacle();
 
         // --- 8. COCHE ---
         const carGroup = new THREE.Group(); carGroup.position.set(-200, 0.6, 250); carGroup.rotation.y = Math.PI; 
@@ -405,45 +471,21 @@
         const shieldMesh = new THREE.Mesh(new THREE.SphereGeometry(2.5, 32, 32), new THREE.MeshStandardMaterial({ color: 0x4dabf7, transparent: true, opacity: 0.4, side: THREE.DoubleSide }));
         shieldMesh.visible = false; carGroup.add(shieldMesh); scene.add(carGroup);
 
-        // --- SISTEMA DE PARTÍCULAS (HUMO DE DERRAPE) ---
+        // --- SISTEMA DE PARTÍCULAS ---
         const smokeParticles = [];
-        const smokeGeo = new THREE.SphereGeometry(0.3, 5, 5); // Esferas low poly
+        const smokeGeo = new THREE.SphereGeometry(0.3, 5, 5); 
         const smokeMat = new THREE.MeshBasicMaterial({ color: 0xeeeeee, transparent: true, opacity: 0.5 });
-
         function createSmoke(pos) {
-            if(smokeParticles.length > 80) return; // Límite de partículas
-            const p = new THREE.Mesh(smokeGeo, smokeMat);
-            p.position.copy(pos);
-            p.position.y = 0.2;
-            // Aleatoriedad para que se vea natural
-            p.position.x += (Math.random()-0.5)*0.5;
-            p.position.z += (Math.random()-0.5)*0.5;
-            
-            p.scale.set(0.5, 0.5, 0.5); // Empiezan pequeñas
-            p.userData = { life: 1.0, growth: 0.05 };
-            scene.add(p);
-            smokeParticles.push(p);
+            if(smokeParticles.length > 80) return; 
+            const p = new THREE.Mesh(smokeGeo, smokeMat); p.position.copy(pos); p.position.y = 0.2;
+            p.position.x += (Math.random()-0.5)*0.5; p.position.z += (Math.random()-0.5)*0.5;
+            p.scale.set(0.5, 0.5, 0.5); p.userData = { life: 1.0, growth: 0.05 }; scene.add(p); smokeParticles.push(p);
         }
 
-        // --- 9. LOGICA DE JUEGO (Velocidad Ajustada) ---
+        // --- 9. LOGICA DE JUEGO ---
         const physics = { 
-            speed: 0, 
-            maxSpeed: 0.88, 
-            baseMaxSpeed: 0.88, 
-            acceleration: 0.02, 
-            friction: 0.985, 
-            braking: 0.025,  
-            
-            // Vectores
-            moveAngle: Math.PI,   
-            facingAngle: Math.PI, 
-            
-            // Sensibilidad de giro suave
-            turnVelocity: 0,
-            maxTurnSpeed: 0.038, 
-            turnSmoothing: 0.08,
-            
-            grip: 0.94            
+            speed: 0, maxSpeed: 0.88, baseMaxSpeed: 0.88, acceleration: 0.02, friction: 0.985, braking: 0.025,  
+            moveAngle: Math.PI, facingAngle: Math.PI, turnVelocity: 0, maxTurnSpeed: 0.038, turnSmoothing: 0.08, grip: 0.94            
         };
         const gameState = { inventory: null, shieldActive: false, turboActive: false };
         const missiles = []; const explosions = [];
@@ -457,12 +499,7 @@
         }
         function activatePowerUp(type) {
             if (type === 'missile') gameState.inventory = 'missile';
-            else if (type === 'turbo') { 
-                gameState.turboActive = true; 
-                physics.maxSpeed = 1.54; 
-                physics.speed = 1.54;    
-                setTimeout(() => { gameState.turboActive = false; physics.maxSpeed = physics.baseMaxSpeed; updateHUD(); }, 3000); 
-            }
+            else if (type === 'turbo') { gameState.turboActive = true; physics.maxSpeed = 1.54; physics.speed = 1.54; setTimeout(() => { gameState.turboActive = false; physics.maxSpeed = physics.baseMaxSpeed; updateHUD(); }, 3000); }
             else if (type === 'shield') { gameState.shieldActive = true; shieldMesh.visible = true; setTimeout(() => { gameState.shieldActive = false; shieldMesh.visible = false; updateHUD(); }, 5000); }
             updateHUD();
         }
@@ -476,71 +513,81 @@
             const geo = new THREE.SphereGeometry(0.6, 8, 8); const mat = new THREE.MeshBasicMaterial({ color: 0xffaa00 });
             for(let i=0; i<8; i++) { const p = new THREE.Mesh(geo, mat); p.position.copy(pos); p.userData = { vel: new THREE.Vector3((Math.random()-.5), (Math.random()-.5), (Math.random()-.5)).multiplyScalar(0.5), life: 1.0 }; scene.add(p); explosions.push(p); }
         }
-
-        // --- SISTEMA DE RESPAWN ---
         function destroyAndRespawnObstacle(index) {
-            const obs = obstacles[index];
-            createExplosion(obs.position);
-            scene.remove(obs);
-            obstacles.splice(index, 1);
-            
+            const obs = obstacles[index]; createExplosion(obs.position); scene.remove(obs); obstacles.splice(index, 1);
             setTimeout(() => { spawnObstacle(); }, 20000);
         }
 
+        // --- CONTROLES MÓVILES (TOUCH) Y TECLADO ---
         const keys = { w:false, s:false, a:false, d:false };
+        
+        // Teclado
         window.addEventListener('keydown', e => { if('wsad'.includes(e.key.toLowerCase())) keys[e.key.toLowerCase()] = true; if(e.code==='ArrowUp') keys.w=true; if(e.code==='ArrowDown') keys.s=true; if(e.code==='ArrowLeft') keys.a=true; if(e.code==='ArrowRight') keys.d=true; if(e.code === 'Space') shootMissile(); });
         window.addEventListener('keyup', e => { if('wsad'.includes(e.key.toLowerCase())) keys[e.key.toLowerCase()] = false; if(e.code==='ArrowUp') keys.w=false; if(e.code==='ArrowDown') keys.s=false; if(e.code==='ArrowLeft') keys.a=false; if(e.code==='ArrowRight') keys.d=false; });
+
+        // Touch
+        const btnLeft = document.getElementById('btn-left');
+        const btnRight = document.getElementById('btn-right');
+        const btnA = document.getElementById('btn-a');
+        const btnB = document.getElementById('btn-b');
+        const btnFire = document.getElementById('btn-fire');
+
+        const addTouch = (elem, key) => {
+            elem.addEventListener('touchstart', (e) => { e.preventDefault(); keys[key] = true; });
+            elem.addEventListener('touchend', (e) => { e.preventDefault(); keys[key] = false; });
+        };
+        addTouch(btnLeft, 'a');
+        addTouch(btnRight, 'd');
+        addTouch(btnA, 'w');
+        addTouch(btnB, 's');
+        
+        btnFire.addEventListener('touchstart', (e) => { e.preventDefault(); shootMissile(); });
 
         const curvePoints = curve.getSpacedPoints(SEGMENTS);
         
         function animate() {
             requestAnimationFrame(animate);
             
-            // 1. INPUT Y ACELERACIÓN
+            // 1. INPUT
             if(keys.w) physics.speed += physics.acceleration; 
             if(keys.s) physics.speed -= physics.braking; 
             physics.speed *= physics.friction;
 
-            // 2. GIRO SUAVIZADO (Inercia de Volante)
+            // 2. GIRO
             let targetTurn = 0;
             if (keys.a) targetTurn = physics.maxTurnSpeed;
             if (keys.d) targetTurn = -physics.maxTurnSpeed;
-            // Interpolación para suavizar la entrada de dirección
             physics.turnVelocity += (targetTurn - physics.turnVelocity) * physics.turnSmoothing;
 
             if(Math.abs(physics.speed) > 0.01) {
-                // Aplicar giro
-                physics.facingAngle += physics.turnVelocity * (physics.speed > 0 ? 1 : -1);
+                const dir = physics.speed > 0 ? 1 : -1;
+                physics.facingAngle += physics.turnVelocity * dir;
             }
 
-            // 3. FÍSICA DE DRIFT
+            // 3. DRIFT
             let driftFactor = physics.grip;
-            if(keys.a || keys.d) driftFactor -= 0.02; // Menos agarre al girar
+            if(keys.a || keys.d) driftFactor -= 0.02; 
             const diff = physics.facingAngle - physics.moveAngle;
             physics.moveAngle += diff * driftFactor;
 
-            // 4. GENERACIÓN DE HUMO (Detectar giro y movimiento)
+            // 4. HUMO CONTINUO (Si gira y se mueve)
             const isTurning = (Math.abs(physics.turnVelocity) > 0.005);
             const isMoving = (Math.abs(physics.speed) > 0.2);
             
             if(isTurning && isMoving) {
-                // Generar humo en ruedas traseras
                 const offsetL = new THREE.Vector3(0.5, 0, 1).applyAxisAngle(new THREE.Vector3(0,1,0), physics.facingAngle);
                 const offsetR = new THREE.Vector3(-0.5, 0, 1).applyAxisAngle(new THREE.Vector3(0,1,0), physics.facingAngle);
-                
-                // Probabilidad para no saturar
                 if(Math.random() > 0.3) createSmoke(carGroup.position.clone().add(offsetL));
                 if(Math.random() > 0.3) createSmoke(carGroup.position.clone().add(offsetR));
             }
 
-            // 5. MOVIMIENTO FINAL
+            // 5. MOVIMIENTO
             const nextPos = new THREE.Vector3(
                 carGroup.position.x - Math.sin(physics.moveAngle) * physics.speed,
                 0.6,
                 carGroup.position.z - Math.cos(physics.moveAngle) * physics.speed
             );
             
-            // Colisiones Pista
             let minDistSq = Infinity; let nearestPoint = null;
             for(let p of curvePoints) { const d = p.distanceToSquared(nextPos); if(d < minDistSq) { minDistSq = d; nearestPoint = p; } }
             if (Math.sqrt(minDistSq) > (ROAD_WIDTH/2 - 1.5)) {
@@ -548,39 +595,15 @@
                 carGroup.position.x = limitPos.x; carGroup.position.z = limitPos.z; physics.speed *= 0.5; 
             } else { carGroup.position.copy(nextPos); }
             
-            // ROTACIÓN VISUAL (Drift visual)
             carGroup.rotation.y = physics.facingAngle + (physics.facingAngle - physics.moveAngle) * 2.0;
-
             drawMinimap(carGroup.position);
             
-            // PowerUps y Colisiones
-            for(let i=powerUps.length-1; i>=0; i--) { 
-                const box = powerUps[i]; box.rotation.y += box.userData.rotSpeed; box.rotation.x += box.userData.rotSpeed; 
-                if(carGroup.position.distanceTo(box.position) < 2.5) { activatePowerUp(box.userData.effect); scene.remove(box); powerUps.splice(i, 1); setTimeout(() => spawnPowerUp(), 5000); } 
-            }
-            for(let i=obstacles.length-1; i>=0; i--) {
-                const obs = obstacles[i];
-                if(carGroup.position.distanceTo(obs.position) < 2.8) {
-                    if(gameState.shieldActive) { destroyAndRespawnObstacle(i); } 
-                    else { destroyAndRespawnObstacle(i); physics.speed = -0.4; }
-                }
-            }
-            for(let i=missiles.length-1; i>=0; i--) { 
-                const m = missiles[i]; m.position.add(m.userData.velocity); m.userData.life--; let hit = false; 
-                for(let j=obstacles.length-1; j>=0; j--) { if(m.position.distanceTo(obstacles[j].position) < 3.0) { destroyAndRespawnObstacle(j); hit = true; break; } } 
-                if(hit || m.userData.life <= 0) { if(!hit) createExplosion(m.position); scene.remove(m); missiles.splice(i, 1); } 
-            }
+            // Lógica Juegos
+            for(let i=powerUps.length-1; i>=0; i--) { const box = powerUps[i]; box.rotation.y += box.userData.rotSpeed; box.rotation.x += box.userData.rotSpeed; if(carGroup.position.distanceTo(box.position) < 2.5) { activatePowerUp(box.userData.effect); scene.remove(box); powerUps.splice(i, 1); setTimeout(() => spawnPowerUp(), 5000); } }
+            for(let i=obstacles.length-1; i>=0; i--) { const obs = obstacles[i]; if(carGroup.position.distanceTo(obs.position) < 2.8) { if(gameState.shieldActive) { destroyAndRespawnObstacle(i); } else { destroyAndRespawnObstacle(i); physics.speed = -0.4; } } }
+            for(let i=missiles.length-1; i>=0; i--) { const m = missiles[i]; m.position.add(m.userData.velocity); m.userData.life--; let hit = false; for(let j=obstacles.length-1; j>=0; j--) { if(m.position.distanceTo(obstacles[j].position) < 3.0) { destroyAndRespawnObstacle(j); hit = true; break; } } if(hit || m.userData.life <= 0) { if(!hit) createExplosion(m.position); scene.remove(m); missiles.splice(i, 1); } }
             for(let i=explosions.length-1; i>=0; i--) { const p = explosions[i]; p.position.add(p.userData.vel); p.userData.life -= 0.05; p.material.opacity = p.userData.life; p.material.transparent = true; if(p.userData.life <= 0) { scene.remove(p); explosions.splice(i, 1); } }
-            
-            // Animación Humo
-            for(let i=smokeParticles.length-1; i>=0; i--) {
-                const p = smokeParticles[i];
-                p.position.y += 0.03;
-                p.scale.multiplyScalar(1.05); // Crece
-                p.userData.life -= 0.04;
-                p.material.opacity = p.userData.life * 0.5;
-                if(p.userData.life <= 0) { scene.remove(p); smokeParticles.splice(i, 1); }
-            }
+            for(let i=smokeParticles.length-1; i>=0; i--) { const p = smokeParticles[i]; p.position.y += 0.03; p.scale.multiplyScalar(1.05); p.userData.life -= 0.04; p.material.opacity = p.userData.life * 0.5; if(p.userData.life <= 0) { scene.remove(p); smokeParticles.splice(i, 1); } }
 
             const camOffset = new THREE.Vector3(0, 20, 35); camOffset.applyAxisAngle(new THREE.Vector3(0,1,0), physics.facingAngle);
             camera.position.lerp(carGroup.position.clone().add(camOffset), 0.1); camera.lookAt(carGroup.position);
