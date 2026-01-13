@@ -397,98 +397,98 @@ header{
     background-color: rgba(0, 0, 0, 0);
 }
 .seccion1{
-    background-image: url(../assets/img1.jpg);
+    background-image: url(../../assets/img1.jpg);
     background-repeat: no-repeat;
 	background-position: center left;
 	background-size: cover;
 }
 .seccion2{
-    background-image: url(../assets/img2.jpg    );
+    background-image: url(../../assets/img2.jpg    );
     background-repeat: no-repeat;
 	background-position: center center;
     background-size: cover;
     justify-content: flex-start;
 }
 .seccion3{
-    background-image: url(../assets/img3.jpg);
+    background-image: url(../../assets/img3.jpg);
     background-repeat: no-repeat;
 	background-position: center left;
 	background-size: cover;
 }
 .seccion4{
-    background-image: url(../assets/img4.jpg);
+    background-image: url(../../assets/img4.jpg);
     background-repeat: no-repeat;
 	background-position: center left;
     background-size: cover;
     justify-content: flex-start;
 }
 .seccion5{
-    background-image: url(../assets/img5.jpg);
+    background-image: url(../../assets/img5.jpg);
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 }
 .seccion6{
-    background-image: url(../assets/img6.jpg);
+    background-image: url(../../assets/img6.jpg);
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
     justify-content: flex-start;
 }
 .seccion7{
-    background-image: url(../assets/img7.jpg);
+    background-image: url(../../assets/img7.jpg);
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 }
 .seccion8{
-    background-image: url(../assets/img8.jpg);
+    background-image: url(../../assets/img8.jpg);
     background-repeat: no-repeat;
 	background-position: center right;
 	background-size: cover;
     justify-content: flex-start;
 }
 .seccion9{
-    background-image: url(../assets/img9.jpg);
+    background-image: url(../../assets/img9.jpg);
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 }
 .seccion10{
-    background-image: url(../assets/img10.jpg);
+    background-image: url(../../assets/img10.jpg);
     background-repeat: no-repeat;
 	background-position: 50% 25%;
 	background-size: cover;
     justify-content: flex-start;
 }
 .seccion11{
-    background-image: url(../assets/img11.jpg);
+    background-image: url(../../assets/img11.jpg);
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 }
 .seccion12{
-    background-image: url(../assets/img12.jpg);
+    background-image: url(../../assets/img12.jpg);
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
     justify-content: flex-start;
 }
 .seccion13{
-    background-image: url(../assets/img13.jpg);
+    background-image: url(../../assets/img13.jpg);
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 }
 .seccion14{
-    background-image: url(../assets/img14.jpg);
+    background-image: url(../../assets/img14.jpg);
     background-repeat: no-repeat;
 	background-position: 50% 20%;
 	background-size: cover;
     justify-content: flex-start;
 }
 .seccion15{
-    background-image: url(../assets/img15.jpg);
+    background-image: url(../../assets/img15.jpg);
     background-repeat: no-repeat;
 	background-position: top left;
 	background-size: cover;
