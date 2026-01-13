@@ -369,7 +369,7 @@ header{
 }
 .metas{
     width: 100%;
-    background-image: url(../assets/metas.webp);
+    background-image: url(../../assets/metas.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -814,7 +814,7 @@ header{
    justify-content: center;
 }
 .imagen_contacto{
-    background-image: url(../assets/jack4.webp);
+    background-image: url(../../assets/jack4.webp);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
