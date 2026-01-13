@@ -101,7 +101,7 @@ function cargarImagenes(numero){
     galerias[numero].forEach((item) => {
         let newImg = document.createElement("img");
         let newContainer = document.createElement("div");
-        newImg.setAttribute("src","My-portfolio/Jack/src/assets/" + item );
+        newImg.setAttribute("src","assets/" + item );
         newContainer.appendChild(newImg);
         newContainer.classList.add('foto_container');
         subContenedorGaleria.appendChild(newContainer);
@@ -134,7 +134,7 @@ function cargarMiniaturas(numero){
         let newContainer = document.createElement("div");
         newContainer.setAttribute('index', `${i++}`);
         newContainer.classList.add("menu-miniaturas__item" , 'slide_miniatura');
-        newImg.setAttribute("src","My-portfolio/Jack/src/assets/" + item );
+        newImg.setAttribute("src","assets/" + item );
         newImg.classList.add('menu-miniaturas__img');
         newContainer.appendChild(newImg);
         subcontenedorMiniaturas.appendChild(newContainer);
@@ -645,7 +645,7 @@ function slider_hero(){
 
     img_hero.forEach((img)=>{
         let newImage = document.createElement('img');
-        newImage.setAttribute("src", "src/assets/"+ img);
+        newImage.setAttribute("src", "assets/"+ img);
         newImage.classList.add('slider-hero__img');
         $slider_hero.appendChild(newImage);
     })
