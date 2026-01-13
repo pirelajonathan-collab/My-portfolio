@@ -157,7 +157,7 @@ const   $cards_container = document.getElementById('grid__cards'),
              {title: "Jack Pereyra",
              text: "Website designed and developed for the peruvian artist Jack Pereyra",
              image: "jack.jpg",
-             link1:"My-portfolio/Jack/",
+             link1:"/Jack/",
              link2:""
              },
              {title: "SYI Website",
@@ -318,5 +318,6 @@ function unfocus(){
     })
 
 }
+
 
 
