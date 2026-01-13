@@ -157,7 +157,7 @@ const   $cards_container = document.getElementById('grid__cards'),
              {title: "Jack Pereyra",
              text: "Website designed and developed for the peruvian artist Jack Pereyra",
              image: "jack.jpg",
-             link1:"https://jackpereyra.com",
+             link1:"/jack",
              link2:""
              },
              {title: "SYI Website",
@@ -316,4 +316,5 @@ function unfocus(){
     $navitem.forEach((item)=>{
         item.classList.add('unfocus');
     })
+
 }
