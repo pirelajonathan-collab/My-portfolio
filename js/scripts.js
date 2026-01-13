@@ -163,7 +163,7 @@ const   $cards_container = document.getElementById('grid__cards'),
              {title: "SYI Website",
              text: "Website developed for the international company Seijiro Yazawa Iwai | Aviation",
              image: "syi.jpg",
-             link1:"https://jonathanpirela.site/syi",
+             link1:"https://seijiroyazawaiwai.com/aviation/",
              link2:""
              },
              {title: "Raptor GPS",
@@ -172,10 +172,10 @@ const   $cards_container = document.getElementById('grid__cards'),
              link1:"https://jonathanpirela.site/raptor",
              link2:""
              },
-             {title: "MU Tutorials",
-             text: "Website developed and designed for Mu Tutorials",
-             image: "mu.jpg",
-             link1:"https://jonathanpirela.site/mu",
+             {title: "Gasfiteria Urgente",
+             text: "Website builder Wix and SEO",
+             image: "gasfiteriaurgente.jpg",
+             link1:"https://www.gasfiteriaurgente.com/",
              link2:""
              }
         ]
@@ -318,6 +318,7 @@ function unfocus(){
     })
 
 }
+
 
 
 
