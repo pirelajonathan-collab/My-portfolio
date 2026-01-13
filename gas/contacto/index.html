@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="shortcut icon" href="../src/assets/logo.png" type="image/x-icon">
+    <link rel="canonical" href="https://gasfiterensantiago.com/contacto" />
+    <meta name="description" content="Gasfiter en Santiago, realizamos destapes, servicios de gasfiteria urgente, atendemos emergencias, urgencias en todo Santiago centro."/>
+    <meta name="keywords" content="Destapes, fugas de agua, alcantarillado, santiago, detección de fugas, reparaciones, emergencias, urgencias, gasfiteria, gasfiter"/>
+    <meta name="robots" content="index"/>
+    <!-- Etiquetas para Twitter-->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:description" content="Gasfiter en Santiago, realizamos destapes, servicios de gasfiteria urgente, atendemos emergencias, urgencias en todo Santiago centro.">
+    <meta name="twitter:title" content="Gasfiter en Santiago | Santiago">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:creator" content="">
+        <!-- Etiquetas para Facebook-->
+    <meta property="og:title" content="Gasfiter en Santiago | Santiago">
+    <meta property="og:description" content="Gasfiter en Santiago, realizamos destapes, servicios de gasfiteria urgente, atendemos emergencias, urgencias en todo Santiago centro.">
+    <meta property="og:url" content="https://gasfiterensantiago.com/">
+    <meta property="og:site_name" content="Gasfiter en Santiago | Santiago">
+    <meta property="og:image" content="https://gasfiterensantiago.com/src/assets/logo.png">
+    <title>Gásfiter | Gasfiter en Santiago | Contacto</title>
+</head>
+<body>
+    <div class="whatsappBtn">
+        <a href="https://wa.me/56994171967" target="_blank">
+            <img class="whatsappImg" src="../src/assets/whatsapp.svg" alt="whatsapp image ico"/>
+        </a>
+    </div>
+    <div class="notifications">
+        <div id="message-sent" class="notifications__text-container"><p>Tu mensaje ha sido enviado</p><span class="palomita">&#10003;</span> </div>
+        <div id="message-error" class="notifications__text-container"><p>Error, tu mensaje no pudo ser enviado</p><span class="palomita">X</span> </div>
+        <div id="message-empty" class="notifications__text-container"><p>No se permiten campos vacios</p><span class="palomita">X</span> </div>
+    </div>
+    <header class="header">
+        <div class="header-background">
+            <img class="header-background__img" src="src/assets/bg1.jpg" alt="">
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="logo"><img class="logo__img" src="../src/assets/logo.png" alt=""></div>
+                <nav class="menu__nav">
+                    <ul class="menu__items">
+                        <li class="menu__item"><a class="menu__item-link" href="../">INICIO</a></li>
+                        <li class="menu__item"><a class="menu__item-link" href="../nosotros">NOSOTROS</a></li>
+                        <li class="menu__item"><a class="menu__item-link" href="../index.html#services">SERVICIOS</a></li>
+                        <li class="menu__item"><a class="menu__item-link" href="../contacto">CONTACTO</a></li>
+                        <li class="menu__item"><a class="menu__item-link button-link emergency-button" href="tel:56994171967"><span class="button-shine"></span><img src="../src/assets/phone.svg">Emergencia</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-hamburguer">
+                    <div class="menu-hamburguer__line"></div>
+                    <div class="menu-hamburguer__line"></div>
+                    <div class="menu-hamburguer__line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="header-text">
+            <div class="container">
+                <div class="header-text__content">
+                    <h1 class="header-title">Conta<span class="header-text__contrast">cto</span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <section class="contact section-container">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2 class="contact-title">Información</h2>
+                        <div class="contact-row info">
+                            <div class="contact-row__item">
+                                <a href="mailto:kareno@twoevento.mx" class="contact-info__link">
+                                    <img class="contact-info__ico" src="../src/assets/mail.png" alt="">
+                                    <p class="contact-info__text">info@gasfiterensantiago.com</p>
+                                </a>
+                            </div>
+                            <div class="contact-row__item">
+                                <a href="tel:56994171967" class="contact-info__link">
+                                    <img class="contact-info__ico" src="src/assets/whitephone.png" alt="">
+                                    <p class="contact-info__text">+56 9 9417 1967</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact-row info-rss">
+                            <div class="rss-container">
+                                <a class="rss_link" href="https://www.facebook.com/TwoEvento" target="_blank"><img class="contact-rss-ico" src="src/assets/whitefb.png" alt=""></a>
+                                <a class="rss_link" href="https://www.instagram.com/twoevento/" target="_blank"><img class="contact-rss-ico" src="src/assets/whiteig.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <div class="contact-form__content">
+                            <h2 class="contact-title">Contacto</h2>
+                            <form action="enviar.php" class="contact-form__container" id="form" method="POST">
+                                <div class="contact-input name">
+                                    <label class="contact-label" for="name">Nombre</label>
+                                    <input type="text" name="name" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{3,20}" required id="">
+                                </div>
+                                <div class="contact-input phone">
+                                    <label class="contact-label" for="phone">Teléfono</label>
+                                    <input type="tel" name="phone" pattern="[0-9+]{7,15}" required id="">
+                                </div>
+                                <div class="contact-input email">
+                                    <label class="contact-label" for="email">Correo</label>
+                                    <input type="email" name="email" pattern="^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$"  required id="">
+                                </div>
+                                <div class="contact-input subject">
+                                    <label class="contact-label" for="subject">Asunto</label>
+                                    <input type="text" name="subject" pattern="[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{3,30}" required id="">
+                                </div>
+                                <div class="contact-input message">
+                                    <label class="contact-label" for="message">Mensaje</label>
+                                    <textarea name="message" id="" cols="30" rows="10" required></textarea>
+                                </div>
+                                <div class="contact-input sendbtn">
+                                    <input class="button-action button-link" type="submit" value="Enviar">
+                                </div>
+                            </form>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="social-network section-container">
+            <div class="container">
+                <div class="social-network__item social-network__text">Siguenos en nuestras redes</div>
+                <div class="social-network__links">
+                    <div class="social-network__item">
+                        <a href="#" class="social-network__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="social-network__ico" width="24" height="24" viewBox="0 0 24 24"><path fill="darkblue" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+                            <div class="social-network__circle"></div>
+                        </a>
+
+                    </div>
+                    <div class="social-network__item">
+                        <a href="#" class="social-network__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="social-network__ico" width="24" height="24" viewBox="0 0 24 24"><path fill="darkblue" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"/></svg>
+                            <div class="social-network__circle"></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div> 
+    </main>
+    <footer class="footer section-container">
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer__left">
+                    <div class="footer__logo">
+                        <img class="footer__logo-img" src="../src/assets/logo.png" alt="">
+                        <div class="footer__left-text">
+                            <h2 class="footer-text"><span class="header-text__contrast"></span></h2>
+                        </div>
+                    </div>
+                    <div class="footer__about">
+                        <div class="footer__about-text">
+ "Gasfiter en Santiago" con más de 20 años de experiencia, es tu experto en gasfitería urgente. Ofrecemos servicios 24 horas, en Santiago de Chile, incluyendo detección de fugas de agua, destapes de cañerías y alcantarillado, instalación de artefactos de grifería y mas. Confía en nuestros técnicos profesionales de la gasfitería para soluciones eficientes y rápidas.
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__mid">
+                    <div class="footer__title">
+                        <h3 class="footer__title-text">Servicios</h3>
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">Destape de cañerías</li>
+                        <li class="footer__list-item">Emergencias</li>
+                        <li class="footer__list-item">Mantenimiento</li>
+                        <li class="footer__list-item">Detección de fugas</li>
+                        <li class="footer__list-item">Reparaciones</li>
+                        <li class="footer__list-item">Instalación de griferias</li>
+                    </ul>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__title">
+                        <h3 class="footer__title-text">Enlaces</h3>
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="../" class="footer__list-item-link">Inicio</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="../nosotros" class="footer__list-item-link">Nosotros</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="../index.html#services" class="footer__list-item-link">Servicios</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="../contacto" class="footer__list-item-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__title">
+                        <h3 class="footer__title-text">Llamanos ahora!</h3>
+                    </div>
+                    <div class="footer__info-tel">
+                        <a href="tel:56994171967" class="footer__info-text"><img class="footer__info-ico" src="../src/assets/phone.svg">+56 9 9417 1967</a>
+                    </div>
+                    <div class="footer__info-mail">
+                        <a  href="mailto:gasfiterensantiago@gmail.com" class="footer__info-text"><img class="footer__info-ico" src="../src/assets/mail.png">gasfiterensantiago@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </footer>
+    <div class="footer__privacity">
+        <p class="footer__privacity-text">© Todos los derechos reservados 2023</p>
+    </div>   
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/scripts.js"></script>
+    <script src="src/js/scripts.js"></script>
+</body>
+</html>
