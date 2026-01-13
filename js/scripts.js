@@ -142,10 +142,10 @@ const   $cards_container = document.getElementById('grid__cards'),
         $card_template = document.getElementById('card').content,
         $fragment = document.createDocumentFragment(),
         cardContent = [
-            {title: "Localiza tu fuga",
-            text: "Website designed and developed for the chilean company Localiza tu fuga",
-            image: "localizatufuga.jpg",
-            link1:"https://localizatufuga.com/",
+            {title: "Gasfiter en Santiago",
+            text: "Website designed and developed for the chilean company Gasfiter en Santiago",
+            image: "gas.jpg",
+            link1:"gas/",
             link2:""
             }, 
             {title: "Two Evento",
@@ -318,6 +318,7 @@ function unfocus(){
     })
 
 }
+
 
 
 
