@@ -442,11 +442,11 @@
     .contact-info{
         border-radius: 5px;
         height: 90%;
-        width: 32%;
+        width: 36%;
         z-index: 100;
         position: absolute;
         z-index: 100;
-        left: 4%;
+        left: 0%;
     }
     .contact-form{
         width: 80%;
@@ -463,16 +463,16 @@
 
 @media only screen and (min-width: 1600px){
     .contact-info{
-        width: 36%;
-        left: 0%;
+        width: 40%;
+        left: -3%;
     }
 }
 
 @media only screen and (min-width: 1920px){
-    .contact-info{
+/*     .contact-info{
         width: 36%;
         left: 0%;
-    }
+    } */
 }
 @media only screen and (min-width: 2000px){
     .contact-info{
@@ -488,4 +488,5 @@
         width: 42%;
         left: -8%;
     }
+
 }
