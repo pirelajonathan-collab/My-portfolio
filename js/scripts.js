@@ -169,7 +169,7 @@ const   $cards_container = document.getElementById('grid__cards'),
              {title: "Raptor GPS",
              text: "Website developed and designed for the Venezuelan company Raptor GPS",
              image: "raptor1.jpg",
-             link1:"https://jonathanpirela.site/raptor",
+             link1:"https://raptorgps.com.ve",
              link2:""
              },
              {title: "Gasfiteria Urgente",
@@ -318,6 +318,7 @@ function unfocus(){
     })
 
 }
+
 
 
 
